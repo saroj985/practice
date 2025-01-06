@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-background: linear-gradient(135deg, #ff0000, #00796b);
+            background: linear-gradient(135deg, #ff0000, #00796b);
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
             display: flex;
@@ -24,12 +24,12 @@ background: linear-gradient(135deg, #ff0000, #00796b);
             font-size: 1.5rem;
             font-weight: bold;
             color: #fff;
-background: radial-gradient(circle, #00bcd4, #4caf50);
+            background: radial-gradient(circle, #00bcd4, #4caf50);
             padding: 8px 8px;
             border-radius: 8px;
             text-align: center;
-            font-family:  cursive, monospace;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            font-family: cursive, monospace;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             line-height: 1.2;
         }
@@ -45,7 +45,7 @@ background: radial-gradient(circle, #00bcd4, #4caf50);
             background: #fff;
         }
         .card-header {
-            background-color: #7f00ff; /* Purple gradient */
+            background-color: #7f00ff;
             color: #fff;
             text-align: center;
             font-size: 2rem;
@@ -59,7 +59,7 @@ background: radial-gradient(circle, #00bcd4, #4caf50);
             font-weight: 600;
         }
         .btn-custom {
-            background: #ff4081; /* Bright Pink */
+            background: #ff4081;
             color: #fff;
             font-weight: 600;
             font-size: 1.1rem;
@@ -69,11 +69,11 @@ background: radial-gradient(circle, #00bcd4, #4caf50);
             border-radius: 8px;
         }
         .btn-custom:hover {
-            background: #e91e63; /* Darker Pink */
+            background: #e91e63;
             transform: scale(1.05);
         }
         .extra-field-label {
-            color: #ff5722; /* Orange-red */
+            color: #ff5722;
             font-weight: 500;
         }
         input, select {
@@ -90,10 +90,10 @@ background: radial-gradient(circle, #00bcd4, #4caf50);
             text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
         }
         .form-control, .form-select {
-            border: 2px solid #ff4081; /* Bright Pink Border */
+            border: 2px solid #ff4081;
         }
         .form-control:focus, .form-select:focus {
-            border-color: #ff5722; /* Orange-red Border */
+            border-color: #ff5722;
             box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
         }
     </style>
@@ -101,14 +101,14 @@ background: radial-gradient(circle, #00bcd4, #4caf50);
 <body>
     <div class="logo">
         <span>ZORBA Project</span>
-        <span><small>by: Ibrahim<small</span>
+        <span><small>by: Ibrahim</small></span>
     </div>
 
     <h1>Welcome to Zorba Project</h1>
 
     <div class="card shadow-lg" style="width: 100%; max-width: 500px;">
         <div class="card-header">
-            Passenger Registration
+            User Registration
         </div>
         <div class="card-body p-4">
             <form action="<%= request.getContextPath() %>/passenger_registration" method="post">
@@ -125,43 +125,17 @@ background: radial-gradient(circle, #00bcd4, #4caf50);
                     <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
                 </div>
                 <div class="mb-3">
-                    <label for="type" class="form-label">Passenger Type</label>
-                    <select class="form-select" id="type" name="type" required>
-                        <option value="" disabled selected>Select Passenger Type</option>
-                        <option value="general">General</option>
-                        <option value="senior_citizen">Senior Citizen</option>
-                        <option value="physically_handicapped">Physically Handicapped</option>
-                    </select>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
                 </div>
-                <div id="extraFields"></div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                </div>
                 <button type="submit" class="btn btn-custom w-100 mt-3">Register</button>
             </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const typeSelect = document.getElementById("type");
-        const extraFieldsDiv = document.getElementById("extraFields");
-
-        typeSelect.addEventListener("change", function () {
-            extraFieldsDiv.innerHTML = '';
-
-            if (typeSelect.value === "senior_citizen") {
-                extraFieldsDiv.innerHTML = `
-                    <div class="mb-3">
-                        <label for="seniorId" class="form-label extra-field-label">Senior Citizen ID</label>
-                        <input type="text" class="form-control" id="seniorId" name="seniorId" placeholder="Enter your Senior Citizen ID" required>
-                    </div>
-                `;
-            } else if (typeSelect.value === "physically_handicapped") {
-                extraFieldsDiv.innerHTML = `
-                    <div class="mb-3">
-                        <label for="proof" class="form-label extra-field-label">Physical Handicapped Proof</label>
-                        <input type="text" class="form-control" id="proof" name="proof" placeholder="Enter your Proof ID" required>
-                    </div>
-                `;
-            }
-        });
-    </script>
 </body>
 </html>
