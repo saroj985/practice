@@ -9,76 +9,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a00);
+background: linear-gradient(135deg, #ff0000, #00796b);
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         .logo {
             position: fixed;
-            top: 10px;
-            left: 10px;
-            font-size: 1.2rem;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #fff;
-            background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
-            padding: 5px 10px;
+background: radial-gradient(circle, #00bcd4, #4caf50);
+            padding: 8px 8px;
+            border-radius: 8px;
             text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Added shadow */
+            font-family:  cursive, monospace;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); /* Soft shadow */
             z-index: 1000;
             line-height: 1.2;
         }
         .logo span {
             display: block;
+            font-size: 1.2rem;
         }
         .card {
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            background: #fff;
         }
         .card-header {
-            background-color: #6c63ff;
+            background-color: #7f00ff; /* Purple gradient */
             color: #fff;
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
-            padding: 1rem;
+            padding: 1.5rem;
             letter-spacing: 1px;
+            border-radius: 20px 20px 0 0;
         }
         .form-label {
-            color: #6c63ff;
+            color: #6a1b9a;
             font-weight: 600;
         }
         .btn-custom {
-            background: #ff758c;
+            background: #ff4081; /* Bright Pink */
             color: #fff;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.1rem;
             border: none;
-            padding: 10px;
+            padding: 12px;
             transition: all 0.3s ease;
+            border-radius: 8px;
         }
         .btn-custom:hover {
-            background: #ff4757;
+            background: #e91e63; /* Darker Pink */
             transform: scale(1.05);
         }
         .extra-field-label {
-            color: #ff4757;
+            color: #ff5722; /* Orange-red */
             font-weight: 500;
         }
         input, select {
-            font-size: 1rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+        .form-control, .form-select {
+            border: 2px solid #ff4081; /* Bright Pink Border */
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #ff5722; /* Orange-red Border */
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
         }
     </style>
 </head>
 <body>
     <div class="logo">
-        <span>ZORBA</span>
-        <span>Project</span>
+        <span>ZORBA Project</span>
+        <span><small>by: Ibrahim<small</span>
     </div>
+
+    <h1>Welcome to Zorba Project</h1>
+
     <div class="card shadow-lg" style="width: 100%; max-width: 500px;">
         <div class="card-header">
             Passenger Registration
