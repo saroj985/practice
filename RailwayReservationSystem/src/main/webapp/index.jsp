@@ -22,7 +22,7 @@
             left: 10px;
             font-size: 1.2rem;
             font-weight: bold;
-            color: #90ee90;
+            color: #fff;
             background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
             padding: 5px 10px;
             text-align: center;
